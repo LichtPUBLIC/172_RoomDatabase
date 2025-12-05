@@ -8,7 +8,6 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.example.prak7.repositori.RepositoriSiswa
 
-
 class EntryViewModel(private val repositoriSiswa: RepositoriSiswa): ViewModel() {
     var uiStateSiswa by mutableStateOf(UIStateSiswa())
 
@@ -26,7 +25,7 @@ class EntryViewModel(private val repositoriSiswa: RepositoriSiswa): ViewModel() 
 
     suspend fun saveSiswa(){
         if (validasiInput()){
-            repositoriSiswa.InsertSiswa(uiStateSiswa.detailSiswa.toSiswa())
+            repositoriSiswa.insertSiswa(uiStateSiswa.detailSiswa.toSiswa())
         }
     }
 }
